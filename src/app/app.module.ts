@@ -10,6 +10,7 @@ import { QRCodeModule } from 'angularx-qrcode';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { MobileappComponent } from './mobileapp/mobileapp.component';
+import { QrGeneratorComponent } from './qr-generator/qr-generator.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { MobileappComponent } from './mobileapp/mobileapp.component';
     HomepageComponent,
     QrCodeComponent,
     NavbarComponent,
-    MobileappComponent
+    MobileappComponent,
+    QrGeneratorComponent
   ],
   imports: [
     BrowserModule,

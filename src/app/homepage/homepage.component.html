@@ -3,26 +3,43 @@
         <div class="col-md-8">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Velkommen til Expo 2023!</h5>
-              <p class="card-text">
+              <h2 class="card-title">Velkommen til Expo 2023!</h2>
+              <p class="card-text" style="font-size:130%">
                 Denne applikasjonen er en prototype av systemet vi utviklet i løpet av bacheloroppgaven vår.
                </p>
-              <p class="card-text">
+              <p class="card-text" style="font-size:130%">
                 Vi i bachelorgruppe 5 har hatt muligheten å samarbeide med GP Digital og Grimsrud AS i løpet av utviklingsprosessen. Denne applikasjonen vil gi dere et lite innblikk i arbeidet vi har gjort.
                 </p>
             </div>
           </div>
         </div>
       </div>
-    <h1 class="text-center mt-5">QR-Kode Generator</h1>
-    <div class="row justify-content-center mt-5">
-      <div class="col-md-6">
-        <input [(ngModel)]="userUrl" type="text" class="form-control" placeholder="Skriv inn URL">
+  </div>
+  <div class="container mt-5">
+    <div class="row">
+      <div class="card-box col-md-4">
+        <a routerLink="/qr-generator" class="card mb-4" style="text-decoration: none">
+          <div class="card-body">
+            <h5 class="card-title">QR-Kode Generator</h5>
+            <p class="card-text">Dette er en mockup av hvordan QR-generator vår så ut.</p>
+          </div>
+        </a>
       </div>
-    </div>
-    <div class="row justify-content-center mt-3">
-      <div class="col-md-6">
-        <button (click)="generateQRCode()" class="btn btn-primary btn-block">Generate</button>
+      <div class="card-box col-md-4">
+        <a routerLink="/qr-code" class="card mb-4" style="text-decoration: none">
+          <div class="card-body">
+            <h5 class="card-title">Skann QR-Kode</h5>
+            <p class="card-text">Dette er en mockup av hvordan QR-koden vil se ut.</p>
+          </div>
+        </a>
+      </div>
+      <div class="card-box col-md-4">
+        <a routerLink="/mobileapp" class="card mb-4" style="text-decoration: none">
+          <div class="card-body">
+            <h5 class="card-title">Mobil webapplikasjon</h5>
+            <p class="card-text">Dette er hvordan mobil applikasjonen vår for mobil så ut.</p>
+          </div>
+        </a>
       </div>
     </div>
   </div>
