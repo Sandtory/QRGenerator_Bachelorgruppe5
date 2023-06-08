@@ -1,0 +1,12 @@
+<div class="container">
+  <h1 class="text-center mt-5">Here is your QR Code</h1>
+  <div class="row justify-content-center mt-5">
+    <div class="col-md-6 text-center">
+      <img [src]="qrCodeDataUrl">
+      <button (click)="goBack()" class="btn btn-secondary btn-block mb-3">Back</button>
+      <button (click)="printQrCode()" class="btn btn-primary btn-block">Print QR Code</button>
+    </div>
+  </div>
+</div>
+
+  
