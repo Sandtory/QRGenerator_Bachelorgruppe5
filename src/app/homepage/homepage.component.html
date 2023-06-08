@@ -1,53 +1,94 @@
 <div class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-          <div class="card">
-            <div class="card-body">
-              <h2 class="card-title">Velkommen til Expo 2023!</h2>
-              <p class="card-text" style="font-size:130%">
-                Denne applikasjonen er en prototype av systemet vi utviklet i løpet av bacheloroppgaven vår.
-               </p>
-              <p class="card-text" style="font-size:130%">
-                Vi i bachelorgruppe 5 har hatt muligheten å samarbeide med GP Digital og Grimsrud AS i løpet av utviklingsprosessen. Denne applikasjonen vil gi dere et lite innblikk i arbeidet vi har gjort.
-                </p>
-            </div>
-          </div>
+  <div class="row">
+    <!-- Left column with the main card -->
+    <div class="col-lg-6">
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="card-title">Velkommen til Expo 2023!</h2>
+          <p class="card-text" style="font-size: 130%">
+            Vi har arbeidet med å forbedre og effektivisere
+            utstyrsregistreringssystemet til GP Digital, for kunden Leif
+            Grimsrud AS. Vårt mål var å utvikle en ny løsning som erstatter
+            manuell dataregistrering og lagring, som fører til feil og høye
+            leiekostnader, med et mer effektivt system basert på skanning av
+            QR-koder.
+          </p>
+          <p class="card-text" style="font-size: 130%">
+            Grunnet taushetsplikt vil ikke all funksjonalitet være tilgjengelig.
+            Denne visningen er en prototype av systemet vi utviklet i løpet
+            av bacheloroppgaven vår.
+          </p>
+          <p class="card-text" style="font-size: 130%">
+            Vi i bachelorgruppe 5 har hatt muligheten å samarbeide med GP
+            Digital og Leif Grimsrud AS i løpet av utviklingsprosessen. Denne
+            demoen vil gi dere et lite innblikk i arbeidet vi har gjort. 
+          </p>
         </div>
       </div>
-  </div>
-  <div class="container mt-5">
-    <div class="row">
-      <div class="card-box col-md-4">
-        <a routerLink="/qr-generator" class="card mb-4" style="text-decoration: none">
-          <div class="card-body">
-            <h5 class="card-title">QR-Kode Generator</h5>
-            <p class="card-text">Dette er en mockup av hvordan QR-generator vår så ut.</p>
-          </div>
-        </a>
-      </div>
-      <div class="card-box col-md-4">
-        <a routerLink="/qr-code" class="card mb-4" style="text-decoration: none">
-          <div class="card-body">
-            <h5 class="card-title">Skann QR-Kode</h5>
-            <p class="card-text">Dette er en mockup av hvordan QR-koden vil se ut.</p>
-          </div>
-        </a>
-      </div>
-      <div class="card-box col-md-4">
-        <a routerLink="/mobileapp" class="card mb-4" style="text-decoration: none">
-          <div class="card-body">
-            <h5 class="card-title">Mobil webapplikasjon</h5>
-            <p class="card-text">Dette er hvordan mobil applikasjonen vår for mobil så ut.</p>
-          </div>
-        </a>
+    </div>
+
+    <!-- Right column with the 3 smaller cards -->
+    <div class="col-lg-6">
+      <div class="row">
+        <div class="card-box col-lg-12 col-md-4">
+          <a
+            routerLink="/qr-generator"
+            class="card mb-4"
+            style="text-decoration: none"
+          >
+            <div class="card-body">
+              <img src="assets/qrgenerator.png" alt="Image description" />
+              <h5 class="card-title">QR-Kode Generator</h5>
+              <p class="card-text">
+                Trykk her for å se hvordan QR-koden generatoren vår ser ut.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="card-box col-lg-12 col-md-4">
+          <a
+            routerLink="/qr-code"
+            class="card mb-4"
+            style="text-decoration: none"
+          >
+            <div class="card-body">
+              <img src="assets/qrgenerated.png" alt="Image description" />
+              <h5 class="card-title">Skann QR-Kode</h5>
+              <p class="card-text">
+                Trykk her for å se hvordan QR-koden vår ser ut.
+              </p>
+            </div>
+          </a>
+        </div>
+        <div class="card-box col-lg-12 col-md-4">
+          <a
+            routerLink="/mobileapp"
+            class="card mb-4"
+            style="text-decoration: none"
+          >
+            <div class="card-body">
+              <img src="assets/mobileapp.png" alt="Image description" />
+              <h5 class="card-title">Mobil webapplikasjon</h5>
+              <p class="card-text">
+                Trykk her for å se hvordan den mobile webapplikasjonen vår ser ut.
+              </p>
+            </div>
+          </a>
+        </div>
       </div>
     </div>
   </div>
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top fixed-bottom">
-    <div class="col-md-4 d-flex align-items-center">
-      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-      </a>
-      <span class="mb-3 mb-md-0 text-muted">Bachelorgruppe 5</span>
-    </div>
+</div>
+
+<footer
+  class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top fixed-bottom"
+>
+  <div class="col-md-4 d-flex align-items-center">
+    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+      <svg class="bi" width="30" height="24">
+        <use xlink:href="#bootstrap"></use>
+      </svg>
+    </a>
+    <span class="mb-3 mb-md-0 text-muted">Takk til alle som hjalp oss med oppgaven!</span>
+  </div>
 </footer>

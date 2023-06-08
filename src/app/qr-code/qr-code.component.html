@@ -1,29 +1,26 @@
-<div class="container">
+<div class="container mt-5">
   <h1 class="text-center mt-5">Her er QR-koden din</h1>
-
   <div class="row justify-content-center mt-5">
-    <div class="col-md-6 text-center">
-      <img [src]="qrCodeDataUrl" style="width:300px; height:300px;">
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <button (click)="printQrCode()" class="btn btn-primary btn-block">Print QR-Kode</button>
-        </div>
-      </div>
-      <div class="row justify-content-center mt-3">
-        <div class="col-md-6">
-          <button (click)="navigateToMobileApp()" class="btn btn-danger btn-block">Skann QR-kode</button>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body text-center">
+          <img [src]="qrCodeDataUrl" class="img-fluid" style="width:300px; height:300px;">
+          <div class="mt-3 d-grid">
+            <button (click)="printQrCode()" class="btn btn-primary btn-lg">Print QR-Kode</button>
+          </div>
+          <div class="mt-3 d-grid">
+            <button (click)="navigateToMobileApp()" class="btn btn-danger btn-lg">Skann QR-kode</button>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
 <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top fixed-bottom">
-  <div class="col-md-4 d-flex align-items-center">
-    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-      <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-    </a>
-    <span class="mb-3 mb-md-0 text-muted">Bachelorgruppe 5</span>
-  </div>
+<div class="col-md-4 d-flex align-items-center">
+  <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+    <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+  </a>
+  <span class="mb-3 mb-md-0 text-muted">Takk til alle som hjalp oss med oppgaven!</span>
+</div>
 </footer>

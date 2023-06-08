@@ -1,19 +1,31 @@
 .nav-link {
     transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
 
-    &:hover {
-        color: #f8f9fa; // change this color as per your design
-        background-color: #1869e3; // change this color as per your design
-    }
+.nav-link:hover {
+    color: #fff; 
+    background-color: transparent;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #1abc9c;
 }
 
 .nav-item {
-    width: 100%;
+    margin-right: 20px;
 }
 
-/* If you want to add padding or margin to the links to create some space around them */
 .nav-link {
-    padding: 10px;
-    margin: 5px;
-    border-radius: 10px;
+    padding: 10px 15px;
+    border-radius: 20px;
+    color: #b3b3b3;
+}
+
+.navbar-brand {
+    color: #b3b3b3;
+    font-weight: bold;
+}
+
+.navbar-dark .navbar-brand:hover {
+    color: #fff;
 }
