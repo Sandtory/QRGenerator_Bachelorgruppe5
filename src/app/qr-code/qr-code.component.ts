@@ -19,7 +19,8 @@ export class QrCodeComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
-      QRCode.toDataURL(params['data'], { errorCorrectionLevel: 'H' }, (err: Error | null, url: string) => {
+      const data = params['data'] || "https://defaultUrl.com";  // Provide a default value if no data is passed
+      QRCode.toDataURL(data, { errorCorrectionLevel: 'H' }, (err: Error | null, url: string) => {
         this.qrCodeDataUrl = url;
       });
     });
@@ -33,7 +34,30 @@ export class QrCodeComponent implements OnInit {
     let newWindow = window.open('', '_blank');
     
     if (newWindow) {
-      newWindow.document.write('<html><head><title>Print QR Code</title></head><body><img src="' + this.qrCodeDataUrl + '"></body></html>');
+      newWindow.document.write(`
+        <html>
+          <head>
+            <title>Print QR Code</title>
+            <style>
+              body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                margin: 0;
+
+              }
+              img {
+                width: 60%;
+                height: auto;
+              }
+            </style>
+          </head>
+          <body>
+            <img src="${this.qrCodeDataUrl}">
+          </body>
+        </html>
+      `);
       newWindow.document.close();
   
       setTimeout(() => {
@@ -42,4 +66,10 @@ export class QrCodeComponent implements OnInit {
       }, 250);
     }
   }
+  navigateToMobileApp() {
+    this.router.navigate(['/mobileapp']);
+  }
+  
+  
+  
 }

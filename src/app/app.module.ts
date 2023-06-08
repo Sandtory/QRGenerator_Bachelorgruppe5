@@ -7,19 +7,25 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { QrCodeComponent } from './qr-code/qr-code.component';
 import { FormsModule } from '@angular/forms';
 import { QRCodeModule } from 'angularx-qrcode';
+import { NavbarComponent } from './navbar/navbar.component';
+import { RouterModule } from '@angular/router';
+import { MobileappComponent } from './mobileapp/mobileapp.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    QrCodeComponent
+    QrCodeComponent,
+    NavbarComponent,
+    MobileappComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     QRCodeModule,
+    RouterModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

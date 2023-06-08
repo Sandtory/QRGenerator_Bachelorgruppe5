@@ -1,0 +1,52 @@
+.mobile-app-mockup {
+    width: 300px;
+    height: 500px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-app-mockup .header {
+    width: 100%;
+}
+
+.mobile-app-mockup .header img {
+    width: 100%;
+    height: auto;
+}
+
+.mobile-app-mockup .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.mobile-app-mockup .footer {
+    width: 100%;
+}
+
+.header-fixed,
+.footer-fixed {
+    width: 100%;
+    position: sticky;
+    background: white;
+}
+
+.header-fixed {
+    top: 0;
+}
+
+.footer-fixed {
+    bottom: 0;
+}
+
+.content {
+    flex-grow: 1;
+}

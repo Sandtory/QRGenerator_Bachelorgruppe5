@@ -1,0 +1,19 @@
+.nav-link {
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+    &:hover {
+        color: #f8f9fa; // change this color as per your design
+        background-color: #1869e3; // change this color as per your design
+    }
+}
+
+.nav-item {
+    width: 100%;
+}
+
+/* If you want to add padding or margin to the links to create some space around them */
+.nav-link {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+}

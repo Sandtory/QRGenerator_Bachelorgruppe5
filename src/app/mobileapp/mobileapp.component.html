@@ -1,0 +1,34 @@
+<div class="mobile-app-mockup d-flex flex-column align-items-center justify-content-between">
+    <div class="header header-fixed">
+        <img src="/assets/grimsrud.png" alt="Logo" class="img-fluid">
+    </div>
+    
+    <div class="content">
+        <div>
+        <button *ngIf="!isLoggedIn" (click)="login()" class="btn btn-danger mt-4">Logg inn</button>
+        </div>
+        
+        <div *ngIf="isLoggedIn">
+            <div>
+                <button (click)="registerEquipment()" class="btn btn-danger mt-4">Registrer Utstyr</button>
+            </div>
+            <div>
+                <button (click)="logout()" class="btn btn-secondary mt-4">Logg ut</button>
+            </div>
+        </div>
+        <div *ngIf="isEquipmentRegistered" class="alert alert-success mt-4" role="alert">
+            Utstyr registrert
+          </div>
+        <div class="footer footer-fixed mt-auto py-3 text-center text-muted">
+            <p>Dette er en prototype av det endelige produktet.</p>
+        </div>
+    </div>
+</div>
+<footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top fixed-bottom">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+      <span class="mb-3 mb-md-0 text-muted">Bachelorgruppe 5</span>
+    </div>
+</footer>
