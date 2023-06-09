@@ -16,7 +16,10 @@ export class UtstyrInfoComponent {
   constructor(private dataService: DataService,private router: Router){}
   UtstyrInfo(){
     this.dataService.SetUtstyrInfo(this.utstyrId,this.utstyrName);
-    this.utstyrMade = true;
+    if(this.dataService.GetName(this.utstyrId) != 'noId')
+      {
+        this.utstyrMade = true;
+      }
   }
 
   RouteApp(): void {
