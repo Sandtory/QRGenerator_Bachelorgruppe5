@@ -10,6 +10,7 @@ const QRCode = require('qrcode');
 })
 export class QrCodeComponent implements OnInit {
   qrCodeDataUrl: string = '';
+  qrParse: string = '';
 
   constructor(
     private router: Router,
@@ -20,6 +21,7 @@ export class QrCodeComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
       const data = params['data'] || "https://defaultUrl.com";  // Provide a default value if no data is passed
+      this.qrParse = data;
       QRCode.toDataURL(data, { errorCorrectionLevel: 'H' }, (err: Error | null, url: string) => {
         this.qrCodeDataUrl = url;
       });
@@ -67,7 +69,7 @@ export class QrCodeComponent implements OnInit {
     }
   }
   navigateToMobileApp() {
-    this.router.navigate(['/mobileapp']);
+    this.router.navigate(['/mobileapp'], { queryParams: { id: this.qrParse } });
   }
   
   

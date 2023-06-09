@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-mobileapp',
@@ -8,9 +10,28 @@ import { Component } from '@angular/core';
 export class MobileappComponent {
   isLoggedIn = false;
   isEquipmentRegistered: boolean = false;
+  equipmentId: string = '';
+  equipmentName: string = '';
+  foundEquipment: boolean = false;
 
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private dataService: DataService,
+    ){}
+  ngOnInit(){
+    this.route.queryParams.subscribe(params => {
+      const id = params['id'] || "noId";  // Provide a default value if no data is passed
+      this.equipmentId = id;
+      console.log(this.equipmentId);
+    });
+  }
   login() {
     this.isLoggedIn = true;
+    
+    if(this.dataService.GetName(this.equipmentId) != "noId"){
+      this.equipmentName = this.dataService.GetName(this.equipmentId);
+    }
   }
   
   logout() {

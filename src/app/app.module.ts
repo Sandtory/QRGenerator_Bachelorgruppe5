@@ -11,6 +11,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { MobileappComponent } from './mobileapp/mobileapp.component';
 import { QrGeneratorComponent } from './qr-generator/qr-generator.component';
+import { UtstyrInfoComponent } from './utstyr-info/utstyr-info.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { QrGeneratorComponent } from './qr-generator/qr-generator.component';
     QrCodeComponent,
     NavbarComponent,
     MobileappComponent,
-    QrGeneratorComponent
+    QrGeneratorComponent,
+    UtstyrInfoComponent
   ],
   imports: [
     BrowserModule,
