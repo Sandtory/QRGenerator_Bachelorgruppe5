@@ -23,7 +23,7 @@ export class MobileappComponent {
     this.route.queryParams.subscribe(params => {
       const id = params['id'] || "noId";  // Provide a default value if no data is passed
       this.equipmentId = id;
-      console.log(this.equipmentId);
+      
     });
   }
   login() {
@@ -31,6 +31,7 @@ export class MobileappComponent {
     
     if(this.dataService.GetName(this.equipmentId) != "noId"){
       this.equipmentName = this.dataService.GetName(this.equipmentId);
+      this.foundEquipment = true;
     }
   }
   
